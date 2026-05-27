@@ -1,18 +1,31 @@
+# Node / TypeScript
 node_modules/
 dist/
 .turbo/
 *.tsbuildinfo
+coverage/
+.next/
 data/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Env
 .env
 .env.*
 !.env.example
-coverage/
-.next/
+
+# OS / IDE
 .DS_Store
 *.log
 .vscode/
 .idea/
 
-# Internal-only docs (not for public repo)
+# Internal-only docs
 auzaar_prd.docx
 phase2_gap.md
+security-gateway/PRD.md

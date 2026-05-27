@@ -1,0 +1,22 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.local
+node_modules/
+.next/
+.turbo/
+dist/
+build/
+dashboard/tsconfig.tsbuildinfo
+dashboard/next-env.d.ts
+.DS_Store
+*.log
+.vscode/
+.idea/
+coverage/
+
+# Internal-only docs
+PRD.md
