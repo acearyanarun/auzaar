@@ -4,6 +4,21 @@
 
 When an AI agent spends your money, who's checking the work? Auzaar sits between AI agents and merchant-side commerce protocols (ACP, UCP, AP2) and intercepts every outbound commerce action — validating intent, enforcing policy, scoring risk, and producing a tamper-evident audit trail before any transaction is released.
 
+---
+
+## Screenshots
+
+**Audit log** — immutable, hash-chained record of every governance event. The screenshot below is real output from `npm run demo`: a transaction submitted, governance started, then blocked by a deterministic spending rule.
+![Audit log](docs/screenshots/01-audit-log.png)
+
+**Policy editor** — view and validate YAML governance policies with the rule schema rendered inline.
+![Policy editor](docs/screenshots/02-policies.png)
+
+**Review queue** — operator surface for flagged transactions awaiting approve/reject (empty state shown).
+![Review queue](docs/screenshots/03-review-queue.png)
+
+---
+
 ## What this demonstrates
 
 - **4-stage governance pipeline** — deterministic rules → ML threat detection → intent alignment → statistical anomaly detection, with composite risk scoring and operator triage routing
