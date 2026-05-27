@@ -1,0 +1,42 @@
+id: pol_consumer_default
+name: Consumer Default Policy
+description: Standard governance policy for individual consumer agents
+rules:
+  - type: spending_limit
+    id: consumer_per_txn_limit
+    maxAmount: 500
+    currency: USD
+    period: per_transaction
+    enabled: true
+
+  - type: spending_limit
+    id: consumer_daily_limit
+    maxAmount: 1000
+    currency: USD
+    period: daily
+    enabled: true
+
+  - type: vendor_blocklist
+    id: consumer_blocked_vendors
+    vendors:
+      - "known-scam-vendor.com"
+      - "suspicious-deals.net"
+    enabled: true
+
+  - type: category_restriction
+    id: consumer_blocked_categories
+    blockedCategories:
+      - gambling
+      - adult
+      - weapons
+    enabled: true
+
+  - type: quantity_limit
+    id: consumer_qty_limit
+    maxQuantity: 10
+    enabled: true
+
+priority: 0
+enabled: true
+createdAt: "2025-01-01T00:00:00.000Z"
+updatedAt: "2025-01-01T00:00:00.000Z"

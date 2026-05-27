@@ -1,0 +1,25 @@
+{
+  "name": "@auzaar/auzaar-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/run-demo.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "demo": "tsc && node dist/run-demo.js",
+    "mock-agent": "tsc && node dist/run-demo.js",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@auzaar/core": "*",
+    "@auzaar/event-log": "*",
+    "@auzaar/governance-engine": "*",
+    "@auzaar/mandate-service": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

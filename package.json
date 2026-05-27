@@ -1,0 +1,25 @@
+{
+  "name": "auzaar",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "demo": "npm run demo --workspace @auzaar/auzaar-demo",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "eval": "node eval/run-eval.mjs"
+  },
+  "packageManager": "npm@11.6.2",
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "lightningcss-darwin-arm64": "^1.32.0"
+  }
+}

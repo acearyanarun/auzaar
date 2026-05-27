@@ -1,0 +1,19 @@
+{
+  "id": "pol_sarah_office_supply",
+  "name": "Sarah's automated office supply cap",
+  "description": "Procurement Lead Sarah Chen mandates a strict $50 USD limit on every automated office supply purchase. Agents must not exceed this amount per checkout, regardless of mandate wording.",
+  "rules": [
+    {
+      "type": "spending_limit",
+      "id": "sarah_office_supply_per_txn",
+      "maxAmount": 50,
+      "currency": "USD",
+      "period": "per_transaction",
+      "enabled": true
+    }
+  ],
+  "priority": 0,
+  "enabled": true,
+  "createdAt": "2026-01-15T09:00:00.000Z",
+  "updatedAt": "2026-04-01T12:00:00.000Z"
+}

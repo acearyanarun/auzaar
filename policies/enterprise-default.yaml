@@ -1,0 +1,51 @@
+id: pol_enterprise_default
+name: Enterprise Default Policy
+description: Standard governance policy for enterprise agent commerce
+rules:
+  - type: spending_limit
+    id: enterprise_per_txn_limit
+    maxAmount: 5000
+    currency: USD
+    period: per_transaction
+    enabled: true
+
+  - type: spending_limit
+    id: enterprise_daily_limit
+    maxAmount: 25000
+    currency: USD
+    period: daily
+    enabled: true
+
+  - type: vendor_blocklist
+    id: enterprise_blocked_vendors
+    vendors:
+      - "known-scam-vendor.com"
+      - "suspicious-deals.net"
+    enabled: true
+
+  - type: category_restriction
+    id: enterprise_blocked_categories
+    blockedCategories:
+      - gambling
+      - adult
+      - cryptocurrency
+      - weapons
+    enabled: true
+
+  - type: quantity_limit
+    id: enterprise_qty_limit
+    maxQuantity: 100
+    enabled: true
+
+  - type: temporal_rule
+    id: enterprise_business_hours
+    allowedDays: [1, 2, 3, 4, 5]
+    allowedHoursStart: 6
+    allowedHoursEnd: 22
+    timezone: UTC
+    enabled: false
+
+priority: 0
+enabled: true
+createdAt: "2025-01-01T00:00:00.000Z"
+updatedAt: "2025-01-01T00:00:00.000Z"
